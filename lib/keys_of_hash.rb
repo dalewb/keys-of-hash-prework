@@ -1,9 +1,11 @@
 class Hash
   def keys_of(*arguments)
     result = []
-    args = [] 
     self.each do |k,v|
-      if 
+      if arguments.include?(v)
+        result << k 
+      end 
     end 
+    result 
   end
 end
